@@ -1,0 +1,65 @@
+
+/* default styling */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  ul {
+    list-style: none;
+
+  }
+
+  nav {
+    padding: 1rem;
+    background-color: var(--primary);
+    filter: drop-shadow(1px 1px 5px #000000);
+    z-index: 99999;
+
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  nav div {
+     display: inline-block;
+     position: sticky;
+     top:0px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: clamp(1rem, 2.5vw, 2.5rem); 
+   
+    transition: color 0.2s,transform 0.1s;
+  }
+
+  .navLinks {
+    display: flex;
+    gap: 40px;
+  }
+
+    .nav-link:hover {
+    color: rgb(162, 255, 119);
+    transform:scale(1.04);
+  }
+
+  .navbarContainer {
+    display: flex;
+    justify-content: space-evenly;
+    transition: top 0.3s;
+  }
+
+
+  
+  .navbarContainer.visible {
+    top: 0;
+  }
+  
+  .navbarContainer.hidden {
+    top: -100px; /* Ajustează înălțimea navbar-ului pentru a se ascunde complet */
+  }
