@@ -3,8 +3,11 @@ import "./product-card.css"
 
 
 const ProductCard = ({category,description,id,image,price,title}) => {
+
+
+
   return (
-    <div className='card-wrapper'>
+    <div className='card-wrapper' >
         <div className='header-wrapper'>
             <img className='product-image' src={image} alt="" />
         </div>

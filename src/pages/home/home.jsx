@@ -10,27 +10,6 @@ const Home = ({ products,loaded }) => {
     const limit = 8;
     const [scrollPosition, setScrollPosition] = useState(0);
 
-    // Funcție pentru actualizarea pozițiilor pe măsură ce se face scroll
-    const handleScroll = () => {
-        const position = window.pageYOffset;
-        setScrollPosition(position);
-        const headerWrapper = document.querySelector('.header-wrapper');
-        if (position > 50) { // Poți ajusta această valoare după preferințele tale
-            headerWrapper.classList.add('hidden');
-        } else {
-            headerWrapper.classList.remove('hidden');
-        }
-    };
-
-    useEffect(() => {
-        // Atașează evenimentul de scroll la încărcarea componentei
-        window.addEventListener('scroll', handleScroll, { passive: true });
-
-        // Dezactivează evenimentul de scroll când componenta se dezactivează
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
 
     return (
         <>  
