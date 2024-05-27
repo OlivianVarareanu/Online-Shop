@@ -1,0 +1,13 @@
+.customButton {
+    padding: 1.5rem;
+    background-color: var(--addtocart);
+    border:none;
+    color: white;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.customButton:hover {
+    cursor: pointer;
+    background-color: var(--addtocarthover);
+}

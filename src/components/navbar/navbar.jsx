@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './navbar.css';
 import { Link } from 'react-router-dom';
 
-function Navbar() {
+function Navbar({ cartCount }) {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const [startScrollPos, setStartScrollPos] = useState(0);
@@ -11,12 +11,12 @@ function Navbar() {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
       
-      // Dacă scrollezi în jos, ascunde navbar-ul
+      // Hide navbar on scroll down
       if (currentScrollPos > prevScrollPos) {
         setVisible(false);
         setStartScrollPos(currentScrollPos);
       } else {
-        // Dacă scrollezi înapoi în sus și te afli sub punctul de plecare, afișează navbar-ul
+        // Show navbar on scroll up
         if (currentScrollPos <= startScrollPos) {
           setVisible(true);
         }
@@ -38,9 +38,9 @@ function Navbar() {
         <Link className="nav-link" to="/">ONLINE SHOP</Link>
       </div>
       <div className="navLinks">
-        <Link className="nav-link" to="/">Home</Link>
-        <Link className="nav-link" to="/products">Products</Link>
-        <Link className="nav-link" to="/checkout">Checkout</Link>
+        <Link className="nav-link" to="/">HOME</Link>
+        <Link className="nav-link" to="/products">PRODUCTS</Link>
+        <Link className="nav-link" to="/checkout">CART {cartCount}</Link>
       </div>
     </nav>
   );

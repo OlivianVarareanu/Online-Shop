@@ -1,4 +1,7 @@
 :root {
   --primary: rgb(43, 43, 43);
-
+  --buy: rgb(62, 189, 31);
+  --buyhover: rgb(68, 211, 32);
+  --addToCart:rgba(139, 157, 255, 0.8);
+  --addToCartHover:rgba(125, 140, 228, 0.8);
 }

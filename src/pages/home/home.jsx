@@ -36,7 +36,8 @@ const Home = ({ products,loaded }) => {
                     </div>
                 </div>
             </div> : 
-            <div className='circular'><CircularProgress/>
+            <div className='circular'>
+                <CircularProgress/>
            </div>}
         </>
     );

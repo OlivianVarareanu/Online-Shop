@@ -1,9 +1,9 @@
 .card-wrapper {
     display: grid;
-    grid-template-rows: 2fr 1fr;
-    align-items: top;
+    grid-template-rows: 1fr 0.5fr;
+    /* align-items: top; */
     justify-items: center;
-    width: 20rem;
+    /* width: 20rem; */
     gap: 20px;
     height: 100%;
     padding: 1rem;

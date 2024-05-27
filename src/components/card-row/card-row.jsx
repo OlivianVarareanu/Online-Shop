@@ -16,9 +16,10 @@ const CardRow = ({products,limit}) => {
         description={product.description}
         image={product.image}
         price={product.price}
-        rating={product.rating}
+        ratingStars={product.rating.rate}
+        ratingCount={product.rating.count}
         title={product.title}
-       
+        
         />)
       })}
         </div>
